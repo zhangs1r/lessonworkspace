@@ -286,11 +286,33 @@ a:hover { color: var(--accent); text-decoration: underline; }
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
-  .hero { padding: var(--space-12) var(--space-4) var(--space-8); }
-  .hero h1 { font-size: var(--text-4xl); }
-  .hero .subtitle { font-size: var(--text-base); }
-  .project-grid { grid-template-columns: 1fr; }
-  .section { padding: var(--space-10) 0; }
+  .hero { padding: var(--space-10) var(--space-4) var(--space-8); }
+  .hero::before { width: 260px; height: 260px; inset: auto -80px -80px auto; }
+  .hero-logo { gap: var(--space-4); }
+  .hero-logo img { width: 44px; height: 44px; }
+  .hero h1 { font-size: var(--text-3xl); }
+  .hero .subtitle { font-size: var(--text-sm); margin-top: var(--space-3); }
+  .hero .meta { margin-top: var(--space-5); }
+  .hero .meta span { font-size: 0.65rem; padding: 0.3rem 0.6rem; }
+  .project-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+  .section { padding: var(--space-8) 0; }
+  .section .inner { padding: 0 var(--space-4); }
+  .section-header h2 { font-size: var(--text-2xl); }
+  .section-header .count { font-size: var(--text-xs); }
+  .project-card { padding: var(--space-5); }
+  .project-card h3 { font-size: var(--text-xl); }
+  .project-card p { font-size: var(--text-xs); }
+  .project-card .btn { font-size: var(--text-xs); padding: 0.45rem 0.9rem; }
+  .footer { padding: var(--space-8) 0 var(--space-10); }
+  .footer .inner { padding: 0 var(--space-4); }
+  .footer .todo { font-size: var(--text-xs); }
+}
+
+@media (max-width: 400px) {
+  .hero h1 { font-size: var(--text-2xl); }
+  .hero-logo img { width: 36px; height: 36px; }
+  .project-card .actions { flex-direction: column; }
+  .project-card .btn { justify-content: center; }
 }
 </style>
 </head>
