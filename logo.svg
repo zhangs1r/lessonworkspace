@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#CC785C"/>
+      <stop offset="100%" stop-color="#A85D42"/>
+    </linearGradient>
+    <linearGradient id="bookLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBFAF7"/>
+      <stop offset="100%" stop-color="#F7F4EE"/>
+    </linearGradient>
+    <linearGradient id="bookRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F7F4EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角方形背景 -->
+  <rect x="20" y="20" width="360" height="360" rx="72" ry="72" fill="url(#bgGrad)"/>
+
+  <!-- 左书页 -->
+  <path d="M200 140
+           C168 122 120 108  70 108
+           L 70 300
+           C120 300 168 314 200 332 Z"
+        fill="url(#bookLeft)"
+        stroke="#1A1A2E"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+
+  <!-- 右书页 -->
+  <path d="M200 140
+           C232 122 280 108 330 108
+           L330 300
+           C280 300 232 314 200 332 Z"
+        fill="url(#bookRight)"
+        stroke="#1A1A2E"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+
+  <!-- 书脊线 -->
+  <line x1="200" y1="140" x2="200" y2="332"
+        stroke="#1A1A2E" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- 左页文字横线 -->
+  <line x1="95" y1="170" x2="175" y2="170" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+  <line x1="95" y1="195" x2="175" y2="195" stroke="#CC785C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="95" y1="220" x2="165" y2="220" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+  <line x1="95" y1="245" x2="170" y2="245" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+
+  <!-- 右页文字横线 -->
+  <line x1="225" y1="170" x2="305" y2="170" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+  <line x1="225" y1="195" x2="310" y2="195" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+  <line x1="225" y1="220" x2="290" y2="220" stroke="#CC785C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <line x1="225" y1="245" x2="300" y2="245" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+
+  <!-- 上方的星星 -->
+  <g transform="translate(200, 72)">
+    <polygon points="0,-28 8,-10 28,-10 12,4 18,24 0,14 -18,24 -12,4 -28,-10 -8,-10"
+             fill="#FFD93D"
+             stroke="#1A1A2E"
+             stroke-width="2.5"
+             stroke-linejoin="round"/>
+  </g>
+
+  <!-- 底部 LW 字母 -->
+  <text x="200" y="372" text-anchor="middle"
+        font-family="Georgia, 'Noto Serif SC', serif"
+        font-size="20"
+        font-weight="700"
+        fill="#F7F4EE"
+        letter-spacing="6"
+        opacity="0.7">L W</text>
+</svg>

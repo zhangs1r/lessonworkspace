@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LessonWorkspace · 课程项目集</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="alternate icon" href="logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -97,6 +99,17 @@ a:hover { color: var(--accent); text-decoration: underline; }
   pointer-events: none;
 }
 .hero .inner { max-width: var(--content-width); margin: 0 auto; position: relative; z-index: 1; }
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+.hero-logo img {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
 .hero h1 {
   font-family: var(--font-serif);
   font-size: var(--text-6xl);
@@ -286,7 +299,12 @@ a:hover { color: var(--accent); text-decoration: underline; }
 <!-- Hero -->
 <div class="hero">
   <div class="inner">
-    <h1>Lesson<span class="accent">Workspace</span></h1>
+    <div class="hero-logo">
+      <img src="logo.svg" alt="LessonWorkspace" width="64" height="64">
+      <div>
+        <h1>Lesson<span class="accent">Workspace</span></h1>
+      </div>
+    </div>
     <p class="subtitle">
       一个以课程和学习内容为核心的创作空间。
       把分散的项目聚到一起，方便管理和发现。
