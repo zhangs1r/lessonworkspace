@@ -9,70 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
 <style>
-:root {
-  --paper:        #F7F4EE;
-  --paper-light:  #FBFAF7;
-  --ink:          #1A1A2E;
-  --ink-80:       #3A3A4A;
-  --ink-60:       #5A5A6A;
-  --ink-40:       #8A8A9A;
-  --ink-20:       #BABAC6;
-  --accent:       #CC785C;
-  --accent-light: #E8C4B0;
-  --accent-deep:  #A85D42;
-  --accent-dim:   rgba(204, 120, 92, 0.12);
-  --border:       #E8E4DC;
-  --border-light: #F0ECE4;
-  --success:      #5A9E6F;
-  --font-serif:   'Noto Serif SC', Georgia, 'Times New Roman', serif;
-  --font-sans:    'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --font-mono:    'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;
-  --text-lg:   1.125rem;
-  --text-xl:   1.25rem;
-  --text-2xl:  1.5rem;
-  --text-3xl:  1.875rem;
-  --text-4xl:  2.25rem;
-  --text-5xl:  3rem;
-  --text-6xl:  3.75rem;
-  --space-1:  0.25rem;
-  --space-2:  0.5rem;
-  --space-3:  0.75rem;
-  --space-4:  1rem;
-  --space-5:  1.25rem;
-  --space-6:  1.5rem;
-  --space-7:  1.75rem;
-  --space-8:  2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-14: 3.5rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --radius-sm:  4px;
-  --radius-md:  8px;
-  --radius-lg:  12px;
-  --radius-xl:  16px;
-  --shadow-sm:  0 1px 2px rgba(26, 26, 46, 0.04);
-  --shadow-md:  0 4px 12px rgba(26, 26, 46, 0.06);
-  --shadow-lg:  0 8px 30px rgba(26, 26, 46, 0.08);
-  --shadow-xl:  0 20px 60px rgba(26, 26, 46, 0.10);
-  --content-width: 1100px;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font-sans);
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: var(--accent-deep); text-decoration: none; transition: color .15s; }
-a:hover { color: var(--accent); text-decoration: underline; }
-
 /* ─── Page ─── */
 .page {
   max-width: var(--content-width);
@@ -183,13 +121,17 @@ a:hover { color: var(--accent); text-decoration: underline; }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
-  transition: transform .2s, box-shadow .2s;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   flex-direction: column;
 }
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+}
+.project-card:active {
+  transform: scale(0.97);
 }
 .project-card .icon {
   font-size: 2rem;
@@ -230,7 +172,9 @@ a:hover { color: var(--accent); text-decoration: underline; }
   border-radius: var(--radius-md);
   font-size: var(--text-sm);
   font-weight: 600;
-  transition: all .15s;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.2s ease,
+              border-color 0.2s ease;
   cursor: pointer;
 }
 .project-card .btn-primary {
@@ -252,6 +196,9 @@ a:hover { color: var(--accent); text-decoration: underline; }
   border-color: var(--accent-light);
   color: var(--accent-deep);
   text-decoration: none;
+}
+.project-card .btn:active {
+  transform: scale(0.95);
 }
 .project-card .divider {
   height: 1px;
@@ -321,17 +268,17 @@ a:hover { color: var(--accent); text-decoration: underline; }
 <!-- Hero -->
 <div class="hero">
   <div class="inner">
-    <div class="hero-logo">
+    <div class="hero-logo animate-in">
       <img src="logo.svg" alt="LessonWorkspace" width="64" height="64">
       <div>
         <h1>Lesson<span class="accent">Workspace</span></h1>
       </div>
     </div>
-    <p class="subtitle">
+    <p class="subtitle animate-in">
       一个以课程和学习内容为核心的创作空间。
       把分散的项目聚到一起，方便管理和发现。
     </p>
-    <div class="meta">
+    <div class="meta animate-in">
       <span>📚 4 个项目</span>
       <span>🔧 持续扩展中</span>
       <span>🌐 GitHub Pages</span>
@@ -346,7 +293,7 @@ a:hover { color: var(--accent); text-decoration: underline; }
       <h2>项目一览</h2>
       <span class="count">共 4 个项目 · 持续更新</span>
     </div>
-    <div class="project-grid">
+    <div class="project-grid animate-stagger">
 
       <!-- PaperLesson -->
       <div class="project-card">
