@@ -401,6 +401,15 @@ li { margin-bottom: var(--space-2); }
   .project-card {
     background: rgba(34, 34, 58, 0.6);
   }
+  .btn-primary, .btn-accent {
+    color: var(--paper);
+  }
+  .btn-primary:hover, .btn-accent:hover {
+    color: var(--paper);
+  }
+  .tag-blue {
+    color: #7AB893;
+  }
   .project-card .btn-ghost {
     border-color: var(--border);
     color: var(--ink-60);
